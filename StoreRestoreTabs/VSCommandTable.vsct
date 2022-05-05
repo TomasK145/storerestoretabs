@@ -16,22 +16,33 @@
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
     <Buttons>
-      <Button guid="StoreRestoreTabs" id="MyCommand" priority="0x0100" type="Button">
+      <Button guid="StoreRestoreTabs" id="StoreTabsCommand" priority="0x0100" type="Button">
         <Parent guid="StoreRestoreTabs" id="MyMenuGroup" />
-        <Icon guid="ImageCatalogGuid" id="StatusInformation" />
+              <Icon guid="ImageCatalogGuid" id="SaveFileDialog" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
-          <ButtonText>My Command</ButtonText>
-          <LocCanonicalName>.StoreRestoreTabs.MyCommand</LocCanonicalName>
+          <ButtonText>Store Tabs</ButtonText>
+          <LocCanonicalName>.Tools.StoreTabs</LocCanonicalName>
         </Strings>
       </Button>
+
+	    <Button guid="StoreRestoreTabs" id="RestoreTabsCommand" priority="0x0200" type="Button">
+		    <Parent guid="StoreRestoreTabs" id="MyMenuGroup" />
+				  <Icon guid="ImageCatalogGuid" id="RestoreDefaultView" />
+		            <CommandFlag>IconIsMoniker</CommandFlag>
+		    <Strings>
+			    <ButtonText>Restore tabs</ButtonText>
+			    <LocCanonicalName>.Tools.SaveOpenTabs</LocCanonicalName>
+		    </Strings>
+	    </Button>
     </Buttons>
   </Commands>
 
   <Symbols>
     <GuidSymbol name="StoreRestoreTabs" value="{54dce376-bda2-4a49-b7e4-e2f0450caf09}">
       <IDSymbol name="MyMenuGroup" value="0x0001" />
-      <IDSymbol name="MyCommand" value="0x0100" />
+      <IDSymbol name="StoreTabsCommand" value="0x0100" />
+      <IDSymbol name="RestoreTabsCommand" value="0x0200" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>
